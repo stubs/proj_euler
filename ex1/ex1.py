@@ -1,9 +1,16 @@
 #!/usr/bin/env python
-
+from itertools import count, islice
 
 def generate_nats(upper_limit):
     """generate list of natural numbers below upper_limit that are also multiples of 3 or 5"""
     return (x for x in xrange(int(upper_limit)) if (x % 3 == 0) or (x % 5 == 0))
+
+
+def islice_generate_nats(upper_limit):
+    """version I initially thought I would be able to pass in arbitrarily large integers...
+    unfortunately stop argument for islice() must be None or an integer: 0 <= x <= maxint. """
+    return (x for x in islice(count(), upper_limit) if (x % 3 == 0) or (x % 5 == 0))
+
 
 
 if __name__ == "__main__":
