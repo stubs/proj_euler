@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 def generate_fibs_ln(upper_limit):
-    """generate fib seq where list items are not to exceed upper_limit (Linear time)"""
+    """return fib list not to exceed upper_limit (linear time)"""
     seed_1 = 0
     seed_2 = 1
     fibs = list()
